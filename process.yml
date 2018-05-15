@@ -1,0 +1,4 @@
+apps:
+  - script: iproxy_pm2.js
+    instances: 4
+    exec_mode: cluster

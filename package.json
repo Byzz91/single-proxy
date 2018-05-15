@@ -1,0 +1,18 @@
+{
+  "name": "iProxy",
+  "version": "1.0.0",
+  "description": "iproxy is inven proxy for web developers.",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "http-proxy": "^1.16.2",
+    "moment": "^2.22.1",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "byzz",
+  "license": "MIT"
+}
