@@ -1,5 +1,5 @@
 {
-  "name": "iProxy",
+  "name": "iproxy",
   "version": "1.0.0",
   "description": "iproxy is inven proxy for web developers.",
   "main": "app.js",
