@@ -13,7 +13,7 @@ const HOST_IP = ip.address();
 const LISTEN_PORT = 8722;
 const VERSION = '1.0';
 
-proxy.on('proxyReq',  (proxyReq, req, res, options) => {
+proxy.on('proxyReq', (proxyReq, req, res, options) => {
     var target = url.parse(req.url);
 
     if (/^(?:(?!adn|ads|static|upload2)[\w\d\-]+)\.inven\.co\.kr$/i.test(target.host)) {
@@ -21,7 +21,7 @@ proxy.on('proxyReq',  (proxyReq, req, res, options) => {
     }
 });
 
-proxy.on('error',  (err, req, res) => {
+proxy.on('error', (err, req, res) => {
     if (!res.headersSent) {
         res.writeHead(500);
     }
