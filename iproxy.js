@@ -36,9 +36,8 @@ http.createServer((req, res) => {
 
     if (REGEX_EXCEPT_DOMAINS.test(target.host)) {
         target.host = process.env.MIRROR_HOST;
+        console.log('[%s] forwarded %s to %s', moment().format('YYYY-MM-DD HH:mm:ss'), req.url, target.host);
     }
-
-    console.log('[%s] forwarded %s//%s to %s//%s', moment().format('YYYY-MM-DD HH:mm:ss'), target.protocol, originHost, target.protocol, target.host);
 
     proxy.web(req, res, {
         target: target.protocol + '//' + target.host
