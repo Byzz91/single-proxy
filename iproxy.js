@@ -12,11 +12,12 @@ let http        = require('http')
 const HOST_IP = ip.address();
 const LISTEN_PORT = 8722;
 const VERSION = '1.0';
+const REGEX_EXCEPT_DOMAINS = /^(?:(?!adn|ads|static|upload|upload2|kstatic|img)[\w\d\-]+)\.inven\.co\.kr$/i;
 
 proxy.on('proxyReq', (proxyReq, req, res, options) => {
     var target = url.parse(req.url);
 
-    if (/^(?:(?!adn|ads|static|upload2)[\w\d\-]+)\.inven\.co\.kr$/i.test(target.host)) {
+    if (REGEX_EXCEPT_DOMAINS.test(target.host)) {
         proxyReq.setHeader('X-Special-Inven-Header', `iProxy@${VERSION} <${process.env.PROXY_USER}>`);
     }
 });
@@ -33,7 +34,7 @@ http.createServer((req, res) => {
     var target = url.parse(req.url)
         , originHost = target.host;
 
-    if (/^(?:(?!adn|ads|static|upload2|kstatic|img)[\w\d\-]+)\.inven\.co\.kr$/i.test(target.host)) {
+    if (REGEX_EXCEPT_DOMAINS.test(target.host)) {
         target.host = process.env.MIRROR_HOST;
     }
 
