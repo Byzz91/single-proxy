@@ -31,7 +31,7 @@
     1. **+ New Profile...** 클릭, **Profile name**을 입력 **Proxy Profile** 선택 후 저장합니다.
     1. 방금 생성한 **Proxy Profile**을 선택, `Protocol: HTTP, Server: 자신의 Windows IP, Port: 8722` 입력 후 저장합니다.
     1. **+ New Profile...** 클릭, **Profile name**을 입력 **Switch Profile**을 선택 후 저장합니다.
-        ![switch omega settings2](http://static.inven.co.kr/image_2011/test/dev/krapp_md/krapp_omega_settings2.jpg)
+        ![switch omega settings](http://static.inven.co.kr/image_2011/test/dev/krapp_md/krapp_omega_settings2.jpg)
     1. 방금 생성한 **Switch Profile**을 선택, **Host wildcard** 타입으로 인벤 도메인을 입력 그리고 **Profile**에서 위에서 추가한 **Proxy Profile**을 매칭 후 저장합니다.
         ![switch omega settings](http://static.inven.co.kr/image_2011/test/dev/krapp_md/krapp_omega_settings.jpg)
  - 프록시 적용하기
