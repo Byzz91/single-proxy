@@ -17,16 +17,16 @@ readme.md 파일의 링크걸린 이미지 파일들이 **403 Forbidden**으로 
 
  - 프록시 설치방법
     1. [Inven Gitlab]에 저장되어 있는 [iProxy]소스를 내려받습니다.
-        `$ git clone http://117.52.90.243/byzz/iproxy.git`
+        - `$ git clone http://117.52.90.243/byzz/iproxy.git`
     1. 해당 디렉토리로 이동 후 의존성 모듈을 설치합니다.
-        `$ cd iproxy && npm install`
+        - `$ cd iproxy && npm install`
     1. [pm2] 모듈을 글로벌로 설치합니다.
-        `$ npm install -g pm2`
+        - `$ npm install -g pm2`
     1. `.env` 파일을 열어 `PROXY_USER`와 `MIRROR_HOST`를 적절하게 수정합니다.
-        `MIRROR_HOST`는 자신의 `Ubuntu` PC의 IP를 입력합니다.
+        - `MIRROR_HOST`는 자신의 `Ubuntu` PC의 IP를 입력합니다.
     1. 마지막으로 실행!
-        `$ npm start`
-        *참고\) 정상적으로 실행된 프록시 화면입니다.*
+        - `$ npm start`
+        - *참고\) 정상적으로 실행된 프록시 화면입니다.*
         ![npm start](http://static.inven.co.kr/image_2011/test/dev/krapp_md/krapp_npm_start.jpg)
     1. 기타 명령어
         - `$ npm stop` : 모든 프로세스를 종료합니다.
