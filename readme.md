@@ -1,5 +1,10 @@
 # iProxy
 
+The iProxy is simplest proxy.
+
+readme.md 파일의 링크걸린 이미지 파일들이 **403 Forbidden**으로 문서에서 보여지지 않는 문제가 있습니다. 
+확인 후 조치하도록 하겠습니다.
+
 ## Version History
 
 > 버전 그것은 사치일 뿐
