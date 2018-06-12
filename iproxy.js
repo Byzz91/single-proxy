@@ -12,7 +12,7 @@ let http        = require('http')
 const HOST_IP = ip.address();
 const LISTEN_PORT = 8722;
 const VERSION = '1.0';
-const REGEX_EXCEPT_DOMAINS = /^(?:(?!adn|ads|static|upload|upload2|kstatic|img|fnt|pds)[\w\d\-]+)\.inven\.co\.kr$/i;
+const REGEX_EXCEPT_DOMAINS = /^(?:(?:(?!adn|ads|static|upload|upload2|kstatic|img|fnt|pds)[\w\d\-]+)\.)?inven\.co\.kr$/i;
 
 proxy.on('proxyReq', (proxyReq, req, res, options) => {
     let target = url.parse(req.url);
