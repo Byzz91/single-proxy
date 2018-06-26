@@ -15,9 +15,20 @@ const LISTEN_PORT = 8722;
 const VERSION = '1.2';
 const REGEX_EXCEPT_DOMAINS = /^(?:(?:(?!adn|ads|static|upload|upload2|kstatic|img|fnt|pds)[\w\d\-]+)\.)?inven\.co\.kr$/i;
 
-const fReformPath = (path) => {
-    path = String(path).replace(/^https?\:\/\/(?:www\.)?inven\.co\.kr/i, '');
-    return path.length >= 1 ? path : '/';
+/**
+ * Capture sitename
+ * 
+ * @param String site 
+ * @return String
+ */
+const captureSite = (site) => {
+    let matches = String(site).match(/^https?:\/\/([\w\_\-]+).inven.co.kr/i);
+
+    if (matches.length > 0) {
+        return matches[1];
+    } else {
+        return 'www';
+    }
 };
 
 proxy.on('proxyReq', (proxyReq, req, res, options) => {
@@ -25,7 +36,7 @@ proxy.on('proxyReq', (proxyReq, req, res, options) => {
 
     if (REGEX_EXCEPT_DOMAINS.test(target.host)) {
         proxyReq.setHeader('X-Special-Inven-Header', `iProxy@${VERSION} <${process.env.PROXY_USER}>`);
-        console.log(` iProxy@${VERSION} ${colors.yellow(req.method)} ${proxyReq.path} ${colors.cyan(req.connection.remoteAddress)}`);
+        console.log(` iProxy@${VERSION} ${colors.yellow(req.method)} ${colors.green(captureSite(req.url))} ${proxyReq.path} ${colors.cyan(req.connection.remoteAddress)}`);
     }
 });
 
