@@ -24,7 +24,7 @@ const REGEX_EXCEPT_DOMAINS = /^(?:(?:(?!adn|ads|static|upload|upload2|kstatic|im
 const captureSite = (site) => {
     let matches = String(site).match(/^https?:\/\/([\w\_\-]+).inven.co.kr/i);
 
-    if (matches.length > 0) {
+    if (matches instanceof Array && matches.length > 0) {
         return matches[1];
     } else {
         return 'www';
