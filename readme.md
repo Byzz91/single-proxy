@@ -2,22 +2,20 @@
 
 The iProxy is simplest proxy.
 
-readme.md 파일의 링크걸린 이미지 파일들이 **403 Forbidden**으로 문서에서 보여지지 않는 문제가 있습니다. 
-확인 후 조치하도록 하겠습니다.
-
 ## Version History
 
 > 버전 그것은 사치일 뿐
 
 ## How To Use
+
 `Windows`의 *Chrome*에서 인벤 도메인 접속시 `Ubuntu`의 로컬 웹 서버로 호스트를 변조하기 위해 사용합니다.
 프록시 서버는 각 개인 `Windows`에서 구동됩니다.
 
 **설치전 [Node.js]과 [Git]이 설치되어 있다고 가정합니다.**
 
  - 프록시 설치방법
-    1. [Inven Gitlab]에 저장되어 있는 [iProxy]소스를 내려받습니다.
-        - `$ git clone http://117.52.90.243/byzz/iproxy.git`
+    1. 저장소에 저장되어 있는 iProxy소스를 내려받습니다.
+        - `$ git clone https://github.com/Byzz91/single-proxy.git`
     1. 해당 디렉토리로 이동 후 의존성 모듈을 설치합니다.
         - `$ cd iproxy && npm install`
     1. [pm2] 모듈을 글로벌로 설치합니다.
@@ -50,7 +48,5 @@ readme.md 파일의 링크걸린 이미지 파일들이 **403 Forbidden**으로 
 [Laravel]: https://laravel.com/
 [Node.js]: https://nodejs.org/en/
 [Git]: https://git-scm.com/downloads
-[Inven Gitlab]: http://117.52.90.243/dashboard/projects
-[iProxy]: http://117.52.90.243/byzz/iproxy
 [pm2]: https://www.npmjs.com/package/pm2
 [Proxy Switch Omega]: https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif
